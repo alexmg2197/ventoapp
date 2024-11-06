@@ -1,7 +1,14 @@
 import './login.css'
+import { useNavigate } from 'react-router-dom'
 
 
 const Login = () =>{
+
+    const navigate = useNavigate()
+
+    const getInicio = () =>{
+        navigate('/Inicio')
+    }
 
     return(
         <div className='hold-transition login-page'>
@@ -13,7 +20,6 @@ const Login = () =>{
                         </div>
                         <div className="card-body">
                             <p className='login-box-msg'>Inicia Sesión</p>
-
                             <form action="#">
                                 <div className="input-group mb-3">
                                     <input type="email" className='form-control' placeholder='Correo' />
@@ -32,7 +38,7 @@ const Login = () =>{
                                     </div>
                                 </div>
                                 <div className='social-auth-links text-center mt-2 mb-3'>
-                                    <button type="submit" className="btn btn-block btn-primary">Iniciar Sesión</button>
+                                    <button type="submit" className="btn btn-block btn-primary" onClick={getInicio}>Iniciar Sesión</button>
                                 </div>
                             </form>
                         </div>
